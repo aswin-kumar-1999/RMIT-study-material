@@ -2,10 +2,12 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-BoldOblique;
 \f3\fnil\fcharset0 HelveticaNeue;\f4\fnil\fcharset0 HelveticaNeue-Bold;\f5\fswiss\fcharset0 ArialMT;
 \f6\froman\fcharset0 Times-Roman;\f7\fswiss\fcharset0 Helvetica-Oblique;}
-{\colortbl;\red255\green255\blue255;\red253\green128\blue8;\red251\green2\blue7;\red43\green71\blue20;
-\red0\green0\blue0;\red255\green255\blue255;\red252\green189\blue9;}
-{\*\expandedcolortbl;;\cssrgb\c100000\c57637\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c21795\c34243\c10019;
-\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c99477\c78089\c0;}
+{\colortbl;\red255\green255\blue255;\red253\green128\blue8;\red0\green0\blue0;\red43\green71\blue20;
+\red38\green38\blue38;\red255\green255\blue255;\red251\green2\blue7;\red252\green189\blue9;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c100000\c57637\c0;\cssrgb\c0\c0\c0;\cssrgb\c21795\c34243\c10019;
+\cssrgb\c20000\c20000\c20000;\cssrgb\c100000\c100000\c100000;\cssrgb\c100000\c14913\c0;\cssrgb\c99477\c78089\c0;\csgray\c0\c0;
+}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
 \paperw11900\paperh16840\margl1440\margr1440\vieww11580\viewh16000\viewkind0
@@ -71,20 +73,24 @@ It provides the \cf2 different access to the different user\cf0 (administer, emp
 \f0\b\fs36 \cf0 How to choose a DBMS?\
 \pard\pardeftab560\pardirnatural\partightenfactor0
 \ls1\ilvl0
-\f3\b0\fs24 \cf0 {\listtext	\uc0\u8259 	}
-\fs26 Protection\
-\ls1\ilvl0
-\fs24 {\listtext	\uc0\u8259 	}
-\fs26 Amount of data\
-\ls1\ilvl0
-\fs24 {\listtext	\uc0\u8259 	}
-\fs26 Frequency of changes
-\f0\b\fs36 \
+\f3\b0\fs24 \cf0 	
+\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+- Handling simple and complex queries\
+\pard\pardeftab720\partightenfactor0
+\ls1\ilvl0\cf5 \kerning1\expnd0\expndtw0 	\expnd0\expndtw0\kerning0
+- Integrity of data\
+	- Scalability\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 	\expnd0\expndtw0\kerning0
+- Security\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 	\expnd0\expndtw0\kerning0
+- Handling concurrent users
+\f0\b\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f1\b0\fs32 \cf0 Difference between attribute and entity\
+\fs32 \cf0 Difference between attribute and entity
+\f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
 \f4\b\fs26 \cf0 Entity\
@@ -96,7 +102,28 @@ It provides the \cf2 different access to the different user\cf0 (administer, emp
 \f0\b\fs36 \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf3 Differentiate b/w DB?\
+
+\fs34 \cf0 What is Transaction?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b0\fs28 \cf0 Transaction is an operation done in DB which includes CRUD. On every transaction, it should maintain 
+\f0\b ACID. \
+Atomicity:- 
+\f1\b0  All operation in a transaction is consider as a single work. So if one of it fails everything  will be reverted back.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Consistency:- 
+\f1\b0 Transaction maintains the constraints rule of the table before and after the transaction is done.\
+
+\f0\b Isolation:- 
+\f1\b0 Transaction of isolated from one another which means until it is inserted in table, the transaction are unaware of other.\
+
+\f0\b Durability:- 
+\f1\b0 Once the transaction is done then the record is permanent.\
+
+\f0\b\fs36 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf7 Differentiate b/w DB?\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 \
 \
@@ -140,7 +167,7 @@ It provides the \cf2 different access to the different user\cf0 (administer, emp
 \cf2 What is lookup table?\
 \
 \
-\cf5 \
+\cf3 \
 
 \f0\b Composite key:- 
 \f1\b0 Combination of two column to make a unique value in the table.\
@@ -240,17 +267,17 @@ the process of structuring a relational database in accordance with a series of 
 - Boolean\
 - Date n time\
 - String and number has many other datatype as per requirement like varChar(max), float, double, integer\
-- \cf7 attachment, hyperlink, geographic, Xml and more\
+- \cf8 attachment, hyperlink, geographic, Xml and more\
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf5 =================================================================\
+\cf3 =================================================================\
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\b\fs32 \cf5 Junction table
+\f0\b\fs32 \cf3 Junction table
 \f1\b0\fs24 \cf0 {{\NeXTGraphic Screenshot 2024-03-10 at 9.30.11â€¯AM.png \width13200 \height5780 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}
-\f0\b\fs32 \cf5 \
+\f0\b\fs32 \cf3 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f1\b0 \cf0 \
@@ -312,7 +339,10 @@ the process of structuring a relational database in accordance with a series of 
 \
 \
 \
-\
+REFERENCE MATERIAL \
+- DB comparison {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=uD3p_rZPBUQ"}}{\fldrslt 
+\fs28 \cb9 \expnd0\expndtw0\kerning0
+https://www.youtube.com/watch?v=uD3p_rZPBUQ}}\
 \
 
 \f0\b \
