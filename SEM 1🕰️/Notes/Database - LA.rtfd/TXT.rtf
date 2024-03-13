@@ -167,11 +167,37 @@ Atomicity:-
 \cf2 What is lookup table?\
 \
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Reaction Schema should have
+\f1\b0  \
+	- RelationName\
+	- Attributes\
+	- PK(represent by underline)\
+	- FK(represent by *)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf3 \
 
 \f0\b Composite key:- 
 \f1\b0 Combination of two column to make a unique value in the table.\
-\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b \cf3 Super key(
+\f1\b0 unique identifier 
+\f0\b ):
+\f1\b0  it can also be a subset of key or individual PK but has to be unique.\
+	- Atleast there will be a one unique identifier R(A,B,C,D). Unique identifier is \{A,B,C,D\}.\
+
+\f0\b Candidate key(
+\f1\b0 minimal unique identifier
+\f0\b ):- 
+\f1\b0 unique key in the table which can be PK or FK or  CK but both the key should be unique where as for super key it need not be.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf3 \
+Represent unique identifier with curly bracket ex: \{empId\}
+\f0\b \
+
+\f1\b0 \
 
 \f0\b\fs38 Normalisation form
 \fs32  
@@ -298,6 +324,8 @@ the process of structuring a relational database in accordance with a series of 
 \f1\b0 is alining the value in the table. It will most be an PK but we can alter as per our requirement.\
 \
 =============================================================\
+\
+\
 \
 \
 \
