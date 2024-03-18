@@ -1,5 +1,4 @@
 #QUESTION 1
-
 val=10
 val*=2
 print(val)
@@ -59,11 +58,11 @@ school_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 is_lockdown = False
 today = 'Monday'
 
-if school_days.__contains__(today) and not(is_lockdown):
+if today in school_days and is_lockdown is False:
     print("I am going to RMIT.")
-elif school_days.__contains__(today) and is_lockdown:
+elif today in school_days and is_lockdown is True:
     print("I am studying from home.")
-elif not(school_days.__contains__(today)) and not(is_lockdown):
+elif not(school_days.__contains__(today)) and not is_lockdown:
     print("I am going to the Brighton beach.")
 else :
     print("I am staying at home")
